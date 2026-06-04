@@ -231,8 +231,8 @@
 %% Layout and front matter - Start %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\shorttitle}[1]{\def\@shorttitle{#1}}
-\newcommand{\leadauthor}[1]{\def\@leadauthor{#1}}
+\newcommand{\shorttitle}[1]{\def\@shorttitle{#1}}\def\@shorttitle{}% default: empty
+\newcommand{\leadauthor}[1]{\def\@leadauthor{#1}}\def\@leadauthor{}% default: empty
 \newcommand{\footerfont}{\normalfont\sffamily\fontsize{7}{9} \selectfont}
 \newcommand{\titlefont}{\fontfamily{lmss}\bfseries\fontsize{18pt}{20pt}\selectfont}
 \newcommand{\dropcapfont}{\fontfamily{lmss}\bfseries\fontsize{22pt}{24pt}\selectfont}
