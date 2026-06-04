@@ -110,12 +110,11 @@
 \RequirePackage{ragged2e}         % \RaggedRight for Y columns
 \RequirePackage{pifont}           % \ding check / cross marks
 \RequirePackage[most]{tcolorbox}  % highlight boxes
-\RequirePackage{mathrsfs}         % \mathscr script alphabet
 \RequirePackage{multirow}         % multi-row table cells
 \RequirePackage{threeparttable}   % tables with note blocks
 \RequirePackage{algorithm}        % algorithm float wrapper
 \RequirePackage{algpseudocode}    % algorithmic pseudocode
-\RequirePackage[charter]{newtxmath}  % Charter-matched math; load last (after amsthm)
+\RequirePackage[charter]{newtxmath}  % Charter-matched math; provides scalable \mathscr
 
 %% Author marks
 \newcommand{\orcidlink}[1]{}
