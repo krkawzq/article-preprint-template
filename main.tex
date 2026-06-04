@@ -49,15 +49,21 @@ keyword one | keyword two | keyword three
 \input{sections/results}
 \input{sections/toolkit}      % demo of the built-in macros — delete in real papers
 \input{sections/discussion}
-\input{sections/methods}
 
-%% ────────────────────────── Bibliography ────────────────────────────
-%% Note: the bibliographystyle is set by preprint.cls; do NOT set it again
-%% here (a second \bibliographystyle triggers a bibtex "another \bibstyle").
+%% ────────────────────────── References ──────────────────────────────
+%% bibliographystyle is set by preprint.cls; do NOT set it again here
+%% (a second \bibliographystyle triggers a bibtex "another \bibstyle").
+\clearpage
 \section*{Bibliography}
 \bibliography{refs}
 
-%% ───────────── Supplementary (comment out if not needed) ─────────────
+%% ──────────────── Methods (after the references, Nature style) ───────
+\clearpage
+\input{sections/methods}
+
+%% ───────────── Supplementary (own pages; comment out if unused) ──────
+%% These files already start a new page and renumber floats as S1, S2, …
+%% For plain supplementary body text, call \beginsupplement before it instead.
 \input{sections/supplementary}
 \input{sections/supplementary_videos}
 

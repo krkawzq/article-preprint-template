@@ -150,6 +150,15 @@
 \crefname{suppfigure}{Supplementary Figure}{supplementary figures}
 \crefname{supptable}{Supplementary Table}{supplementary tables}
 
+%% Supplementary section: restart float/equation counters with an "S" prefix.
+%% Call \beginsupplement once where the supplementary material begins, so its
+%% figures/tables/equations are numbered S1, S2, … (distinct from the main text).
+\newcommand{\beginsupplement}{%
+  \setcounter{figure}{0}\renewcommand{\thefigure}{S\arabic{figure}}%
+  \setcounter{table}{0}\renewcommand{\thetable}{S\arabic{table}}%
+  \setcounter{equation}{0}\renewcommand{\theequation}{S\arabic{equation}}%
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Package dependencies - End %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
