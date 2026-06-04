@@ -1,0 +1,64 @@
+%% =====================================================================
+%%  preprint.cls — scientific manuscript, main file
+%%  Body text lives in sections/; this file holds layout, front matter,
+%%  and assembly only.
+%%
+%%  Layout switch: line below = preprint (two-column); comment it and use
+%%  the submit line for a one-column submission version (line numbers).
+%%  Build:  latexmk -pdf main.tex     (or simply: make)
+%% =====================================================================
+\documentclass[twocolumn]{preprint}
+%\documentclass[submit]{preprint}
+\usepackage{lipsum}   % placeholder text; remove for real writing
+
+\begin{document}
+
+%% ───────────────────────── Front matter ─────────────────────────────
+\leadauthor{Author}
+\title{Your Paper Title: A Concise and Informative Subtitle}
+\shorttitle{Short Title}
+
+%% Affiliations are numbered; author roles use card suits:
+%%   \cofirst = co-first / equal,  \colead = co-lead,  \corr = corresponding
+\author[1,\cofirst]{First Author}
+\author[2]{Second Author}
+\author[1,\corr]{Senior Author}
+\affil[1]{First Institution, City, Country}
+\affil[2]{Second Institution, City, Country}
+\emails{\{first,senior\}@inst-a.edu, second@inst-b.edu}
+\frontnotes{%
+  \textsuperscript{\cofirst}These authors contributed equally.\\
+  \textsuperscript{\corr}Correspondence: senior@inst-a.edu}
+\date{}
+
+\maketitle
+
+\begin{abstract}
+Replace this with your abstract: state the problem, your contribution, and the
+main result in a few self-contained sentences.
+\lipsum[1]
+\end{abstract}
+
+\begin{keywords}
+keyword one | keyword two | keyword three
+\end{keywords}
+
+%% ─────────────────────────── Main text ──────────────────────────────
+%% Reorder / add / drop sections by editing the \input list below.
+\input{sections/introduction}
+\input{sections/results}
+\input{sections/toolkit}      % demo of the built-in macros — delete in real papers
+\input{sections/discussion}
+\input{sections/methods}
+
+%% ────────────────────────── Bibliography ────────────────────────────
+%% Note: the bibliographystyle is set by preprint.cls; do NOT set it again
+%% here (a second \bibliographystyle triggers a bibtex "another \bibstyle").
+\section*{Bibliography}
+\bibliography{refs}
+
+%% ───────────── Supplementary (comment out if not needed) ─────────────
+\input{sections/supplementary}
+\input{sections/supplementary_videos}
+
+\end{document}

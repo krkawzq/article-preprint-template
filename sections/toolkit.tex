@@ -1,0 +1,60 @@
+\section*{Toolkit Demo}\label{s:toolkit}
+This section demonstrates the macros and environments built into
+\texttt{preprint.cls}. Delete it in a real manuscript.
+
+\subsection*{Theorems and proofs}
+\begin{definition}\label{def:demo}
+A \emph{placeholder} is any object you replace before submission.
+\end{definition}
+\begin{theorem}\label{thm:demo}
+Under the placeholder assumption, the bound $\abs{x}\le\norm{x}$ holds.
+\end{theorem}
+\begin{proof}
+Immediate from the definitions.
+\end{proof}
+\begin{remark}
+Theorems, propositions, lemmas and corollaries share one counter; definitions
+and remarks each have their own.
+\end{remark}
+
+\subsection*{Math macros}
+Operators and notation:
+$\argmax_x f(x)$, $\E[X]$, $\Var(X)$, $x \in \R^n$,
+$\vect{w}\trans \mat{A}\, \vect{w}$, $\norm{\vect{w}}_2$, $\set{1,\dots,n}$.
+
+\subsection*{Emphasis and marks}
+\good{good} / \bad{bad} / \maybe\ / \hilite{highlight} / \best{best} /
+\secondbest{runner-up}; checks \cmark\ and crosses \xmark.
+
+\subsection*{Callout boxes}
+\begin{highlight}
+A light accent callout for an aside or a key sentence.
+\end{highlight}
+\begin{keypoint}[Takeaway]
+A titled callout for key claims or summaries.
+\end{keypoint}
+
+\subsection*{Tables}
+A journal-style table: \texttt{booktabs} rules, \texttt{siunitx} decimal
+alignment, grouped headers via \texttt{\textbackslash cmidrule}, and footnotes
+via \texttt{threeparttable}.
+\begin{table}[t]
+\centering
+\caption{Results on the benchmark; best per column in \textbf{bold}.}
+\label{tab:demo}
+\begin{threeparttable}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{l S[table-format=2.1] S[table-format=2.1] c}
+\toprule
+\textbf{Method} & {\textbf{Acc.}} & {\textbf{F1}} & \textbf{Pass}\\
+\cmidrule(lr){2-3}\cmidrule(l){4-4}
+Baseline\tnote{a} & 81.2 & 79.5 & \xmark\\
+Prior work        & 88.7 & 87.1 & \cmark\\
+\textbf{Ours}     & \bfseries 91.4 & \bfseries 90.2 & \cmark\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item[a] Re-implemented from the original paper.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
